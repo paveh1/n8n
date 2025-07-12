@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: n8n
+    env: node
+    plan: free  
+    repo: https://github.com/paveh1/n8n/new/master  
+    branch: main  
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value:aws-0-eu-central-1.pooler.supabase.com 
+      - key: DB_POSTGRESDB_PORT
+        value: 6543
+      - key: DB_POSTGRESDB_DATABASE
+        value: postgres
+      - key: DB_POSTGRESDB_USER
+        value: postgres.nequhnopawfncwjzvlye
+      - key: DB_POSTGRESDB_PASSWORD
+        value: " ^3dhlBKNlRfM^n-s\n"
+      - key: DB_POSTGRESDB_SCHEMA
+        value: public
+      - key: DB_POSTGRESDB_SSL
+        value: true
+      - key: N8N_ENCRYPTION_KEY
+        value:k6WTBhgx2BTE17qSZNI5m9lYo28xHhv4
+      - key: N8N_HOST
+        value: n8n-rlwc.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
+      - key: GENERIC_TIMEZONE
+        value: Asia/Tehran
+      - key: TZ
+        value: Asia/Tehran
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=4096
