@@ -3,7 +3,7 @@ services:
     name: n8n
     env: node
     plan: free  
-    repo: https://github.com/paveh1/n8n/new/master  
+    repo: https://github.com/paveh1/n8n.git  
     branch: main  
     buildCommand: pnpm install && pnpm build
     startCommand: pnpm start
