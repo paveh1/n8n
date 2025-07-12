@@ -36,3 +36,8 @@ services:
         value: Asia/Tehran
       - key: NODE_OPTIONS
         value: --max-old-space-size=4096
+			- key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+         value: true
+	    - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+       value: true
+	
